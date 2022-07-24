@@ -6,7 +6,8 @@ import { ContentsInput,
     PostWriteDiv, 
     TitleInput,
     PostSubmit,
-    PostSubmitDiv } from './styledComponent';
+    PostSubmitDiv,
+    MediaDiv } from './styledComponent';
 
     
 const SubmitComponent = React.memo(({onSubmit}) => (
@@ -53,7 +54,7 @@ const WritePost = () => {
     console.log(inputs);
 
     return (
-        <div>
+        <MediaDiv>
             <PostTitleDiv>
                 <PostTitle>고민 게시판</PostTitle>
             </PostTitleDiv>
@@ -78,7 +79,7 @@ const WritePost = () => {
 
             <SubmitComponent onSubmit={onSubmit}></SubmitComponent>           
             
-        </div>
+        </MediaDiv>
     );
 };
 
