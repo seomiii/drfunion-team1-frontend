@@ -4,6 +4,8 @@ import { LoginTitle,LoginInput, LoginSubmitDiv,LoginupButton,LoginupDiv,LoginDiv
 const Login = () => {
     const [inputId, setInputId] = useState('')
     const [inputPw, setInputPw] = useState('')
+    const [isLogin,setIsLogin]=useState(false)
+    const [IsSignIn,setSignIn] = useState(true)
 
     const handleInputId = (e) => {
         setInputId(e.target.value)
@@ -17,6 +19,9 @@ const Login = () => {
         console.log('click login')
         console.log('email',inputId)
         console.log('pw',inputPw)
+
+        setIsLogin(true)
+        document.location.href='/'
         // axios.post('/api/signin',{
             
         // })
@@ -30,11 +35,30 @@ const Login = () => {
             <LoginTitle>Sign in to your accont</LoginTitle>
 
             <LoginupDiv>
-                <LoginupButton>sign in</LoginupButton>
-                <LoginupButton>sign up</LoginupButton>
+                <LoginupButton onClick={()=> setSignIn(true)}>sign in</LoginupButton>
+                <LoginupButton onClick={()=> setSignIn(false)}>sign up</LoginupButton>
             </LoginupDiv>
+
             
+            {IsSignIn && <><LoginInput 
+            type='text'
+            name='input_id' 
+            value={inputId} 
+            onChange={handleInputId}
+            placeholder='Email'/>
+
             <LoginInput 
+            type='password' 
+            name='input_pw' 
+            value={inputPw} 
+            onChange={handleInputPw}
+            placeholder='Password'
+            />
+            <LoginSubmitDiv onClick={onClickLogin}>SIGN IN</LoginSubmitDiv>
+            </>  }
+
+            {!IsSignIn && <>
+                <LoginInput 
             type='text'
             name='input_id' 
             value={inputId} 
@@ -49,7 +73,19 @@ const Login = () => {
             placeholder='Password'
             />
 
-            <LoginSubmitDiv onClick={onClickLogin}>SIGN IN</LoginSubmitDiv>
+            <LoginInput 
+            type='password' 
+            name='input_pw' 
+            value={inputPw} 
+            onChange={handleInputPw}
+            placeholder='Repeat Password'
+            />
+            <LoginSubmitDiv onClick={onClickLogin}>SIGN UP</LoginSubmitDiv>           
+            </>}        
+            
+           
+
+            
 
         </LoginDiv>
         </MediaDiv>

@@ -1,6 +1,7 @@
 import React,{useState} from 'react';
 import { useNavigate } from 'react-router-dom';
 import { HomeSearchDiv, HomeTitle, SearchButton,HomeSearch, HomeImage, FamousDiv, FamousTitle, Famous, FamousGrid, HomeButton,HomeButton2} from './styledComponent';
+import Header from './Header';
 
 const Home = () => {
 
@@ -18,16 +19,24 @@ const Home = () => {
       navigate('/write');
     };
 
+    const goPost=()=>{
+        navigate('/board');
+    }
+
 
     return (
         <div>
+            <Header/>
             <HomeTitle>나와 같은 고민을 가진 사람은 어떻게 했을까요?</HomeTitle>
             <HomeSearchDiv>
                 <HomeSearch 
                 type='text'
-                name='serach' 
+                name='search' 
                 value={search}
                 placeholder='검색어를 입력하세요'></HomeSearch>
+
+                
+
                 <SearchButton>Search</SearchButton>
             </HomeSearchDiv>
 
@@ -42,7 +51,7 @@ const Home = () => {
 
 
             <HomeButton onClick={goWrite}>고민상담 하러가기</HomeButton>
-            <HomeButton2>조언하러가기</HomeButton2>
+            <HomeButton2 onClick={goPost}>조언하러가기</HomeButton2>
         </div>
     );
 };

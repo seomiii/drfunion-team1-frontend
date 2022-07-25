@@ -1,5 +1,6 @@
 import React,{useState} from 'react';
 import { useNavigate } from 'react-router-dom';
+import Header from './Header';
 import { ContentsInput, 
     PostTitle,
     PostTitleDiv,
@@ -15,22 +16,6 @@ const SubmitComponent = React.memo(({onSubmit}) => (
       <PostSubmit onClick={onSubmit}>게시하기</PostSubmit>
     </PostSubmitDiv>
 ));
-
-//const navigate = useNavigate();
-
-const onSubmit=()=>{
-    console.log('submit');
-}
-
-// const onSubmit = () => {
-//     axios.post(`${apiUrl}/posts/`, {
-//       title: inputs.title,
-//       contents: inputs.contents,
-//       repls: [],
-//     }).then(() => {
-//       navigate('../');
-//     })
-//   }
 
 
 const WritePost = () => {
@@ -53,7 +38,27 @@ const WritePost = () => {
 
     console.log(inputs);
 
+    const navigate = useNavigate();
+
+    const onSubmit=()=>{
+        console.log('submit');
+        navigate('/board'); 
+    }
+
+// const onSubmit = () => {
+//     axios.post(`${apiUrl}/posts/`, {
+//       title: inputs.title,
+//       contents: inputs.contents,
+//       repls: [],
+//     }).then(() => {
+//       navigate('../');
+//     })
+//   }
+
+
     return (
+        <>
+        <Header/>
         <MediaDiv>
             <PostTitleDiv>
                 <PostTitle>고민 게시판</PostTitle>
@@ -80,6 +85,7 @@ const WritePost = () => {
             <SubmitComponent onSubmit={onSubmit}></SubmitComponent>           
             
         </MediaDiv>
+        </>
     );
 };
 

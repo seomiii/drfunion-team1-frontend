@@ -43,7 +43,7 @@ export const ContentsInput = styled.textarea`
   height: 700px;
   font-size : 20px;
   border: none;
-  font-family: 'Noto San]s KR', sans-serif;
+  font-family: 'Noto Sans KR', sans-serif;
   outline:none;
 `;
 
@@ -63,7 +63,7 @@ export const PostTitleDiv = styled.div`
 export const PostTitle = styled.span`
   margin-top: 10px;
   margin-bottom: 5px;
-  font-family: 'Black Han Sans', sans-serif;
+  
   font-size: 24px;
   margin-left : 10px;
   
@@ -83,7 +83,7 @@ export const PostSubmitDiv = styled.div`
 export const PostSubmit = styled.div`
   margin-top: 10px;
   margin-bottom: 5px;
-  font-family: 'Black Han Sans', sans-serif;
+  
   font-size: 20px;
   
 `;
@@ -138,7 +138,7 @@ margin-top:59px;
  justify-content: center;
  //background-color: skyblue;
  padding : 30px;
- font-family: 'Noto Sans';
+ 
 `
 
 export const LoginInput = styled.input`   
@@ -206,7 +206,7 @@ export const HomeSearchDiv=styled.div`
   margin: 0px auto;
   width: 1120px;
   margin-top: 55px;
-
+  
 `
 export const HomeSearch = styled.input`
   font-size:18px;
@@ -215,6 +215,7 @@ export const HomeSearch = styled.input`
   border: none;
   background-color: #F5F5F5;
   text-indent:1em;
+  outline:none;
 `
 export const SearchButton=styled.button`
   font-size:18px;
@@ -268,6 +269,7 @@ export const HomeImage=styled.img`
   height:501px;
   background-size:cover;
   postiion : relative;
+  margin-bottom:134px;
 `
 
 export const HomeButton=styled.button`
@@ -294,3 +296,185 @@ export const HomeButton2=styled.button`
   background-color:white;
   border-radius: 30px;
 `
+//------Board ------
+
+export const Rec = styled.div`
+  width: 1512px;
+  height: 700px;
+  left: 0px;
+  top: 0px;
+
+  background: #d1dcd1;
+`;
+
+export const PostList = styled.div`
+  position: absolute;
+  width: 1349px;
+  height: 1577px;
+  left: 77px;
+  top: 179px;
+
+  background: #f5f5f5;
+`;
+
+export const Rec2 = styled.div`
+  position: absolute;
+  width: 1512px;
+  height: 500px;
+  left: 0px;
+  top: 1331.5px;
+
+  background: white;
+`;
+
+export const Rec3 = styled.div`
+  width: 1512px;
+  height: 110px;
+  left: 0px;
+  top: 0px;
+
+  background: #d1dcd1;
+`;
+
+export const GominListName = styled.div`
+  position: absolute;
+  width: 100px;
+  height: 50px;
+  left: 147px;
+  top: 78px;
+
+  font-style: normal;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 30px;
+`;
+
+export const PagingSection = styled.section`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 0px auto;
+  width: 150px;
+  margin-top: 20px;
+`;
+//맨 밑에 페이지넘버
+export const PagenumberDiv = styled.div`
+  position: absolute;
+  width: 10px;
+  height: 22px;
+  left: 744px;
+  top: 1463px;
+
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+
+  color: #000000;
+`;
+
+export const PostMax = styled.div`
+  margin-top: 150px;
+`;
+
+//---PostView---
+export const PostBox = styled.div`
+  box-sizing: border-box;
+
+  position: absolute;
+  width: 1308px;
+  height: 808px;
+  left: 102px;
+  top: 312px;
+
+  border: 1px solid #202437;
+`;
+
+export const GominPost = styled.div`
+  position: absolute;
+  width: 150px;
+  height: 29px;
+  left: 125px;
+  top: 253px;
+
+  
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  /* identical to box height */
+
+  color: #000000;
+`;
+
+export const PostBoxName = styled.div`
+  box-sizing: border-box;
+
+  position: absolute;
+  width: 1308px;
+  height: 57px;
+  left: 102px;
+  top: 239px;
+
+  border: 1px solid #202437;
+`;
+
+export const PostBoxLine = styled.div`
+  position: absolute;
+  width: 1223.01px;
+  height: 0px;
+  left: 144px;
+  top: 422px;
+
+  border: 1px solid #6f6c6c;
+`;
+
+export const CategoryBox = styled.div`
+  box-sizing: border-box;
+
+  position: absolute;
+  width: 127px;
+  height: 41px;
+  left: 163px;
+  top: 448px;
+
+  border: 1px solid #000000;
+  border-radius: 20px;
+`;
+
+export const ReplAdd = styled.div`
+  box-sizing: border-box;
+
+  position: absolute;
+  width: 1248px;
+  height: 60px;
+  left: 102px;
+  top: 1148px;
+
+  border: 1px solid #202437;
+`;
+
+export const CommentButton = styled.div`
+  box-sizing: border-box;
+
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  left: 1350px;
+  top: 1148px;
+
+  background: #e68d6c;
+  border: 1px solid #000000;
+`;
+
+export const CommentBox = styled.div`
+  box-sizing: border-box;
+
+  position: absolute;
+  width: 1308px;
+  height: 500px;
+  left: 102px;
+  top: 1227px;
+
+  border: 1px solid #000000;
+`;
