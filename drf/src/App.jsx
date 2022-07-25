@@ -1,10 +1,11 @@
 import React from "react";
 import Borad from "./Borad";
+import items from "./mockup.json";
 
 const App = () => {
   return (
     <div>
-      <Borad />
+      <Borad items={items} />
     </div>
   );
 };
