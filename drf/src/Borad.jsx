@@ -31,36 +31,25 @@ const Borad = ({ items }) => {
       <Rec2></Rec2>
       <Rec3></Rec3>
 
-      <Routes>
-        <Route path="/postview/:iD" element={<PostView />}></Route>
-        <Route
-          path="/"
-          element={
-            <>
-              <Rec></Rec>
-              <PostList>
-                <GominListName>고민 목록</GominListName>
-                <PostMax>
-                  {data.map((item) => (
-                    <EachPost
-                      key={item.id}
-                      id={item.id}
-                      title={item.title}
-                      author={item.author}
-                      category={item.category}
-                      createdAt={item.created_at}
-                    />
-                  ))}
-                </PostMax>
-                <PagingSection>
-                  <PagenumberDiv>2</PagenumberDiv>
-                </PagingSection>
-              </PostList>
-            </>
-          }
-        ></Route>
-      </Routes>
-      <Footer></Footer>
+      <Rec></Rec>
+      <PostList>
+        <GominListName>고민 목록</GominListName>
+        <PostMax>
+          {data.map((item) => (
+            <EachPost
+              key={item.id}
+              id={item.id}
+              title={item.title}
+              author={item.author}
+              category={item.category}
+              createdAt={item.created_at}
+            />
+          ))}
+        </PostMax>
+        <PagingSection>
+          <PagenumberDiv>2</PagenumberDiv>
+        </PagingSection>
+      </PostList>
     </>
   );
 };
