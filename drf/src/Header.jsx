@@ -37,6 +37,7 @@ const IdBox = styled.div`
   height: 31px;
   left: 1344px;
   top: 16px;
+  text-align: center;
 
   border: 1px solid #000000;
   border-radius: 20px;
@@ -53,8 +54,7 @@ const Header = () => {
           }}
         />
       </HeaderMain>
-      <IdBox></IdBox>
-      <LoginDiv>login</LoginDiv>
+      <IdBox>Longin</IdBox>
     </>
   );
 };
