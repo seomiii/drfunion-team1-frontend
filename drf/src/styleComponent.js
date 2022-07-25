@@ -373,6 +373,22 @@ export const PostBox = styled.div`
   border: 1px solid #202437;
 `;
 
+export const PostBoxDiv = styled.span`
+  position: absolute;
+  width: 1186px;
+  height: 384px;
+  left: 100px;
+  top: 250px;
+
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+
+  color: #6f6c6c;
+`;
+
 export const GominPost = styled.div`
   position: absolute;
   width: 150px;
@@ -402,13 +418,28 @@ export const PostBoxName = styled.div`
   border: 1px solid #202437;
 `;
 
+export const PostBoxNameDiv = styled.span`
+  box-sizing: border-box;
+
+  position: absolute;
+  width: 800px;
+  height: 33px;
+  left: 55px;
+  top: 120px;
+
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 27px;
+  line-height: 33px;
+`;
+
 export const PostBoxLine = styled.div`
   position: absolute;
   width: 1223.01px;
   height: 0px;
   left: 144px;
   top: 422px;
-
   border: 1px solid #6f6c6c;
 `;
 
@@ -423,6 +454,22 @@ export const CategoryBox = styled.div`
 
   border: 1px solid #000000;
   border-radius: 20px;
+`;
+
+export const CategoryBoxDiv = styled.div`
+  position: absolute;
+  width: 37px;
+  height: 24px;
+  left: 16px;
+  top: 5px;
+
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+
+  color: #000000;
 `;
 
 export const ReplAdd = styled.div`
@@ -460,4 +507,91 @@ export const CommentBox = styled.div`
   top: 1227px;
 
   border: 1px solid #000000;
+`;
+
+export const CommentPro = styled.div`
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  left: 122px;
+  top: 1254px;
+
+  background: #d9d9d9;
+  border-radius: 10px;
+`;
+
+export const ReCommentBox = styled.div`
+  box-sizing: border-box;
+
+  position: absolute;
+  width: 1197px;
+  height: 200px;
+  left: 183px;
+  top: 1451px;
+
+  background: #f5f5f5;
+  border: 1px solid #000000;
+`;
+
+export const ReCommentBoxPro = styled.div`
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  left: 220px;
+  top: 1500px;
+
+  background: #d9d9d9;
+  border-radius: 10px;
+`;
+
+export const ReplyAddContainer = styled.div`
+  position: absolute;
+
+  width: 1310px;
+`;
+
+export const CommentContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 1310px;
+
+  padding: 24px;
+`;
+
+export const CommentAuthorContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+`;
+
+export const CommentInfo = styled.div`
+  position: absolute;
+  width: 169px;
+  height: 24px;
+  left: 196px;
+  top: 1267px;
+
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+
+  color: #000000;
+`;
+
+export const CommentBoxDiv = styled.span`
+  width: 1182px;
+  height: 48px;
+  left: 180px;
+  top: 1600px;
+
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+
+  color: #000000;
 `;
