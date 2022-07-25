@@ -25,7 +25,7 @@ const PostName = styled.div`
 `;
 
 const PostLine = styled.div`
-  width: 1099px;
+  width: 1340px;
   height: 0px;
   left: 130px;
   top: 254px;
@@ -79,7 +79,6 @@ const PostDate = styled.div`
   color: #6f6c6c;
 `;
 
-//이미지 내 304라는 숫자- 이걸 1,2,3이런 순서 형식으로 바꾸고 싶습니다
 const PostId = styled.div`
   width: 28px;
   height: 22px;

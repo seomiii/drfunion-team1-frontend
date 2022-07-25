@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
+import Logo from "./Img/logo.png";
 import { useNavigate } from 'react-router-dom';
-// import Logo from "./Img/logo.png";
 
 const HeaderMain = styled.div`
   width: 1512px;
@@ -38,6 +38,7 @@ const IdBox = styled.div`
   height: 31px;
   left: 1344px;
   top: 16px;
+  text-align: center;
 
   border: 1px solid #000000;
   border-radius: 20px;
@@ -45,22 +46,22 @@ const IdBox = styled.div`
 
 const Header = () => {
   const navigate = useNavigate();
+  
   const goHome=()=>{
     navigate('/');
   }
-  
+
   return (
     <>
       <HeaderMain>
         <img onClick={goHome}
-          src='/drflogo.png'
+          src={Logo}
           style={{
             margin: "20px 10px 0px",
           }}
         />
       </HeaderMain>
-      <IdBox></IdBox>
-      <LoginDiv>login</LoginDiv>
+      <IdBox>Longin</IdBox>
     </>
   );
 };
