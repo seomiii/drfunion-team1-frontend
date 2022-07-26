@@ -1,6 +1,8 @@
 import React,{useState} from 'react';
 import { useNavigate } from 'react-router-dom';
 import Header from './Header';
+import axios from 'axios';
+
 import { ContentsInput, 
     PostTitle,
     PostTitleDiv,
@@ -36,7 +38,7 @@ const WritePost = () => {
         });
     };
 
-    console.log(inputs);
+    //console.log(inputs);
 
     const navigate = useNavigate();
 
@@ -45,15 +47,21 @@ const WritePost = () => {
         navigate('/board'); 
     }
 
-// const onSubmit = () => {
-//     axios.post(`${apiUrl}/posts/`, {
-//       title: inputs.title,
-//       contents: inputs.contents,
-//       repls: [],
-//     }).then(() => {
-//       navigate('../');
-//     })
-//   }
+
+    // const onSubmit = () => {
+    //     axios.post("/api/posts", {
+        
+    //     title : 'dd',
+    //     content : 'ddd',
+    //     // title: inputs.title,
+    //     // content: inputs.contents,
+    //     author:1,
+        
+    //     }).then(() => {
+    //     navigate('../');
+    //     })
+    // }
+
 
 
     return (
