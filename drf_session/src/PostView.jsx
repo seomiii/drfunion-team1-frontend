@@ -1,6 +1,7 @@
 import React from "react";
 //import styled from "styled-components";
 import { useParams } from "react-router-dom";
+import { format } from "date-fns";
 import items from "./mockup.json";
 import {
   GominPost,
@@ -24,6 +25,8 @@ import {
   CommentAuthorContainer,
   CommentInfo,
   CommentBoxDiv,
+  CommentInfoContainer,
+  PostContainer,
 } from "./styleComponent.js";
 import Header from "./Header";
 //import Comments from "./Comments";
@@ -36,35 +39,44 @@ const PostView = () => {
   return (
     <>
       <Header></Header>
-      <Rec2></Rec2>
       <Rec3></Rec3>
-      <GominPost>고민 게시판</GominPost>
-      <PostBoxName>
-        <PostBoxNameDiv>{postData.title}</PostBoxNameDiv>
-      </PostBoxName>
-      <PostBox>
-        <PostBoxDiv>{postData.content}</PostBoxDiv>
-      </PostBox>
-      <PostBoxLine />
-      <CategoryBox>
-        <CategoryBoxDiv>{postData.category}</CategoryBoxDiv>
-      </CategoryBox>
-      <ReplyAddContainer>
-        <ReplAdd placeholder="댓글을 입력하세요."></ReplAdd>
-        <CommentButton></CommentButton>
-      </ReplyAddContainer>
+      <PostContainer>
+        <GominPost>고민 게시판</GominPost>
 
-      {postData?.comment?.map((item, idx) => (
-        <CommentContainer key={idx}>
-          <CommentAuthorContainer>
-            <CommentPro></CommentPro>
-            <CommentInfo>{item.author}</CommentInfo>
-          </CommentAuthorContainer>
-          <CommentBox>
-            <CommentBoxDiv>{item.content}</CommentBoxDiv>
-          </CommentBox>
-        </CommentContainer>
-      ))}
+        <>
+          <PostBox>
+            <PostBoxName>
+              <PostBoxNameDiv>{postData.title}</PostBoxNameDiv>
+            </PostBoxName>
+            <PostBoxLine />
+            <CategoryBox>
+              <CategoryBoxDiv>{postData.category}</CategoryBoxDiv>
+            </CategoryBox>
+            <PostBoxDiv>{postData.content}</PostBoxDiv>
+          </PostBox>
+        </>
+
+        <ReplyAddContainer>
+          <ReplAdd placeholder="댓글을 입력하세요."></ReplAdd>
+          <CommentButton></CommentButton>
+        </ReplyAddContainer>
+
+        {postData?.comment?.map((item, idx) => (
+          <CommentContainer key={idx}>
+            <CommentAuthorContainer>
+              <CommentPro></CommentPro>
+              <CommentInfo>{item.author}</CommentInfo>
+            </CommentAuthorContainer>
+            <CommentBox>{item.content}</CommentBox>
+            <CommentInfoContainer>
+              <CommentBox>
+                {`날짜 : ${format(new Date(item.created_at), "yy-MM-dd")}`}
+              </CommentBox>
+              <CommentBox>{`좋아요 수 : ${item.like}`}</CommentBox>
+            </CommentInfoContainer>
+          </CommentContainer>
+        ))}
+      </PostContainer>
     </>
   );
 };
